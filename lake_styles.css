@@ -1,0 +1,93 @@
+﻿@charset "utf-8";
+
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'), url('cac_champagne.ttf') format('tff');
+    font-family: dobkin;
+    src: url('DobkinPlain.woff') format('woff'), url('DobkinPlain.ttf') format('tff');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Austin Inmon
+   Date:  9.11.18 
+   
+   Filename: lake_styles.css
+
+*/
+/* structural styles */
+/*  */
+html {
+    background-image: linear-gradient(rgb(19, 29, 34), rgb(39, 54, 92));
+}
+
+body {
+    background-color: rgb(193, 181, 161);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+header {
+    background-color: rgb(39, 54, 92);
+
+}
+
+header nav>a:visited,
+header nav>ul a:link {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 5px
+}
+
+header nav>ul a:hover,
+header nav>ul a:active {
+    color: rgb(142, 131, 118);
+}
+
+nav ul a:visited,
+nav ul a:link {
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+nav>ul a:hover,
+nav>ul a:active {
+    color: rgb(39, 54, 92);
+}
+
+nav ul li {
+    list-style-type: none;
+    line-height: 2.2em
+}
+
+#rightcol {
+    background-color: rgb(142, 131, 118);
+    padding: 40px 20px 40px 20px;
+}
+
+#rightcol>nav>h2 {
+    color: rgb(34, 43, 66);
+    text-shadow: 2px 2.5px 4px gray;
+}
+
+footer {
+    text-align: center;
+    padding: 5px 2.5px 5px 2.5px;
+    font-weight: bold;
+}
+
+section>aside:first-of-type {
+    background-color: rgb(142, 131, 118);
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 7px 6px 5px black;
+}
+
+section>aside:first-of-type a:link,
+a:visited {
+    color: whitesmoke;
+}
