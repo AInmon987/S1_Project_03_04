@@ -1,5 +1,6 @@
 ﻿@charset "utf-8";
-/* Added the font face rule for the font styles champagne and dobkin. */
+
+/* Added the font face rule for the font styles champagne and dobkin with the formats for the older browsers. */
 @font-face {
     font-family: Champagne;
     src: url('cac_champagne.woff') format('woff'), url('cac_champagne.ttf') format('tff');
@@ -21,21 +22,25 @@
 */
 /* structural styles */
 /*  */
+/* This style is for the background of the html and its a linear-gradient. The linear gradient is were the color changed as the viewer scrolls down.  */
 html {
     background-image: linear-gradient(rgb(19, 29, 34), rgb(39, 54, 92));
-    
+
 }
 
+/* The style rule is for the body and it has the backgorund color and the family font. The text in the body is going to be 'Libre Franklin', sans-serif.  */
 body {
     background-color: rgb(193, 181, 161);
     font-family: 'Libre Franklin', sans-serif;
 }
 
+/* The rule is saying that the header of the navagation will be rgb(39, 54, 92).  */
 header {
     background-color: rgb(39, 54, 92);
 
 }
 
+/* The rule is for the header and the nav that is nested in the header and for the visted and hypertext links. The content is the color, the decoration for text is none decoration and the magin is 5px.  */
 header nav>a:visited,
 header nav>ul a:link {
     color: whitesmoke;
@@ -43,12 +48,14 @@ header nav>ul a:link {
     margin: 5px
 }
 
+/* The rule is for the header and the nav that is nested in the header and for the visted and active and the content is color and the background color.  */
 header nav>ul a:hover,
 header nav>ul a:active {
     color: rgb(5, 29, 165);
     background-color: rgba(252, 252, 252, 0.9)
 }
 
+/* The nav and the ul is nested in the nav and the links have the content of color and text decoration.  */
 nav ul a:visited,
 nav ul a:link {
     color: whitesmoke;
@@ -56,26 +63,45 @@ nav ul a:link {
 
 }
 
+/* The nav and the ul is nexted in the nav and the hover and active has the color.  */
 nav>ul a:hover,
 nav>ul a:active {
     color: rgb(39, 54, 92);
 }
 
-nav ul li {
-    list-style-type: none;
+/* The rule is for the ul that is nested in the nav and the content is the list-style-type is none and the line height is 2.2em. makes the transitions for font sizes .25 seconds long. Uses the transition ease out and has a .25 seconds. */
+nav ul li a {
+    -webkit-transition: font-size .25s, ease-out .25s;
+    transition: font-size .25s, ease-out .25s;
     line-height: 2.2em
 }
 
+/* The li is nested in the ul that is nested in the nav and the style rule is the list-style-type is none. */
+nav ul li {
+    list-style-type: none;
+}
+
+/* This rule effects the links when the user hovers the links and the ul is nested in the nav and thats nested in the id rightcol. the style rule has color, font-size, the text decoration none. */
+#rightcol>nav>ul a:hover {
+    color: rgb(39, 54, 92);
+    font-size: 1.25em;
+    text-decoration: none;
+
+}
+
+/* The rule is for the id rightcol and the content is the background color and the padding.  */
 #rightcol {
     background-color: rgb(142, 131, 118);
     padding: 40px 20px 40px 20px;
 }
 
+/* The rule is for the id rightcol and the secondary headings that are nested in the nav and the content is the color and the text shadow.  */
 #rightcol>nav>h2 {
     color: rgb(34, 43, 66);
     text-shadow: 2px 2.5px 4px gray;
 }
 
+/* The footer element style rule has the content of color, text shadow, text align of horizontal center, padding and the font-weight.  */
 footer {
     color: rgb(34, 43, 66);
     text-shadow: 2px 2.5px 4px gray;
@@ -84,6 +110,7 @@ footer {
     font-weight: bold;
 }
 
+/* The rule is for the first aside thats nested in the section and the content is background-color, padding, border-radius and the box shadow. */
 section>aside:first-of-type {
     background-color: rgb(142, 131, 118);
     padding: 10px 20px 10px 20px;
@@ -91,60 +118,79 @@ section>aside:first-of-type {
     box-shadow: 7px 6px 5px black;
 }
 
+/* The rule is for the ul thats nested in the first aside thats nested in the section and the content is the list style type squares. */
+section>aside:first-of-type ul {
+    list-style-type: square;
+}
+
+/* The first aside is nested in the section and the rule is for the links that have a color. */
 section>aside:first-of-type a:link,
 a:visited {
     color: whitesmoke;
 }
 
+/* The rule is for the hovered and active that is in the aside thats nested in the section and has the color. */
 section>aside:first-of-type a:hover,
 a:active {
     color: rgb(34, 43, 66);
 }
 
+/* The primary heading is nested in the id leftcol and the content is color, text-shadow, and padding.  */
 #leftcol>h1 {
     color: rgb(34, 43, 66);
     text-shadow: 2px 2.5px 4px gray;
-    padding:  10px 20px 10px 20px;
-    
+    padding: 10px 20px 10px 20px;
+
 }
 
+/* The element blockquote has the color. */
 blockquote {
     color: black;
 }
 
+/* The p tags are nested in the id leftcol and the content is color and padding. */
 #leftcol>p {
     color: black;
     padding: 5px 3px 5px 3px;
 }
 
-section>aside{
+/* The aside is nested in the section and the styles are background-color, padding, border-radius, box shadow.  */
+section>aside {
     background-color: rgb(142, 131, 118);
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
     box-shadow: 7px 6px 5px black;
 }
+
+/* The primary heading is nested in the aside that is nested in the section. the content is color text shadow and font size. */
 section>aside>h1 {
-color: rgb(34, 43, 66);
-text-shadow: 2px 2.5px 4px gray;
-font-size: 25px;
+    color: rgb(34, 43, 66);
+    text-shadow: 2px 2.5px 4px gray;
+    font-size: 25px;
 }
 
+/* The secondary heading is nested in the aside that is nested in the section and the content is color, text shadow and font size. */
 section>aside>h2 {
-color: rgb(34, 43, 66);
-text-shadow: 2px 2.5px 4px gray;
-font-size: 25px;
+    color: rgb(34, 43, 66);
+    text-shadow: 2px 2.5px 4px gray;
+    font-size: 25px;
 }
 
+/* The blockquote element and the content is quotes.  */
 blockquote {
     quotes: '\201C';
 }
-#rightcol>blockquote::before{
+
+/* The rule is for the quotes that are in the blockquote that is nested in the id rightcol and its the before and there is padding, font size, and a open quote symbol.  */
+#rightcol>blockquote::before {
     padding-top: 40px;
     content: open-quote;
     font-size: 1.5em;
 }
+
+/* The rule is for the quotes that are in the blockquote that is nested in the id rightcol and its the after and there is padding, font size, and a close quote symbol. */
 #rightcol>blockquote::after {
-    padding-bottom:40px; 
+    padding-bottom: 40px;
     content: close-quote;
     font-size: 1.5em;
 }
