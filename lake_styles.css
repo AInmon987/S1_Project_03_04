@@ -71,8 +71,8 @@ nav>ul a:active {
 
 /* The rule is for the ul that is nested in the nav and the content is the list-style-type is none and the line height is 2.2em. makes the transitions for font sizes .25 seconds long. Uses the transition ease out and has a .25 seconds. */
 nav ul li a {
-    -webkit-transition: font-size .25s, ease-out .25s;
-    transition: font-size .25s, ease-out .25s;
+    -webkit-transition: font-size .15s, ease-out .15s;
+    transition: font-size .15s, ease-out .15s;
     line-height: 2.2em
 }
 
@@ -115,7 +115,7 @@ section>aside:first-of-type {
     background-color: rgb(142, 131, 118);
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
-    box-shadow: 7px 6px 5px black;
+    box-shadow: 7px 6px 5px  black;
 }
 
 /* The rule is for the ul thats nested in the first aside thats nested in the section and the content is the list style type squares. */
@@ -145,7 +145,7 @@ a:active {
 
 /* The element blockquote has the color. */
 blockquote {
-    color: black;
+    color: whitesmoke;
 }
 
 /* The p tags are nested in the id leftcol and the content is color and padding. */
@@ -159,7 +159,7 @@ section>aside {
     background-color: rgb(142, 131, 118);
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
-    box-shadow: 7px 6px 5px black;
+    box-shadow: 10px 7px 5px  black;
 }
 
 /* The primary heading is nested in the aside that is nested in the section. the content is color text shadow and font size. */
@@ -174,6 +174,7 @@ section>aside>h2 {
     color: rgb(34, 43, 66);
     text-shadow: 2px 2.5px 4px gray;
     font-size: 25px;
+
 }
 
 /* The blockquote element and the content is quotes.  */
@@ -185,12 +186,12 @@ blockquote {
 #rightcol>blockquote::before {
     padding-top: 40px;
     content: open-quote;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 /* The rule is for the quotes that are in the blockquote that is nested in the id rightcol and its the after and there is padding, font size, and a close quote symbol. */
 #rightcol>blockquote::after {
     padding-bottom: 40px;
     content: close-quote;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
